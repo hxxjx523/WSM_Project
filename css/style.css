@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.airplainBG{
+    width: 100%;
+   
+}
+
+.airplainG{
+    width: 100%;
+    margin-top: -4px;
+}
+
+nav{
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    justify-self: start;
+    position: absolute;
+}
+
+li{
+    font-size: 23px;
+    display: inline-block;
+    padding: 2%;
+}
+
+.logo{
+    padding: 2%;
+}
