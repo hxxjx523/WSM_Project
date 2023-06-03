@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
+/* desctop */
 *{
     margin: 0;
     padding: 0;
@@ -18,11 +19,11 @@
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 100%;
-    margin: 2%;
+    padding: 1% 0% 1% 0%;
     overflow: visible;
 }
 
@@ -71,4 +72,20 @@ li:hover::after {
     transition: all 350ms ease-out; 
     left: 0%; 
     width: 100%;
+}
+
+/* tablet */
+@media screen and (max-width: 720px) {
+   body{
+    background-color: blueviolet;
+   }
+    
+}
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    body{
+        background-color: yellow;
+    }
+    
 }
