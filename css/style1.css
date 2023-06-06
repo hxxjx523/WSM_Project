@@ -74,11 +74,23 @@ li:hover::after {
     width: 100%;
 }
 
+.bi-chevron-down{
+   color: #fff;
+   font-size: 40px;
+   display: none;
+}
+
 /* tablet */
-@media screen and (max-width: 720px) {
-   body{
-    background-color: blueviolet;
-   }
+@media screen and (max-width: 930px) {
+    header ul{
+       display: none;
+    }
+    .bi-chevron-down{
+        display: contents;
+    }
+    .menu{
+        display: contents;
+    }
     
 }
 

@@ -20,6 +20,7 @@ header{
     overflow: visible;
     z-index: 1;
     border-bottom: #a7a7a7 1px solid;
+    margin-top: -5%;
 }
 
 a{
@@ -65,4 +66,9 @@ li:hover::after {
     transition: all 350ms ease-out; 
     left: 0%; 
     width: 100%;
+}
+
+.d{
+    margin: 5%;
+    z-index: 6;
 }
