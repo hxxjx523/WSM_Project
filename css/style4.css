@@ -20,7 +20,7 @@ header{
     overflow: visible;
     z-index: 1;
     border-bottom: #a7a7a7 1px solid;
-    margin-top: -5%;
+    /* margin-top: -40%; */
 }
 
 a{
@@ -68,12 +68,69 @@ li:hover::after {
     width: 100%;
 }
 
-.d{
-    margin: 5%;
-    z-index: 6;
+
+
+body{
+    margin: 0;
+    /* padding: 20px; */
+    /* display: flex; */
+    justify-content: center;
+    height: 100vh;
+
 }
 
-summary{
-    font-size: 35px;
-    font-weight: bold;
+
+.img{
+    width: 150px;
+    height: 150px;
+}
+
+.ercword{
+    color: #5fbaa7;
+}
+
+.currency{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.currency input{
+    text-align: right;
+    padding: 1px 2px;
+    border: none;
+    font-size: 30px;
+}
+
+.selectcurrency{
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #777;
+    background: transparent;
+    width: 400px;
+
+}
+
+.swap-rate-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rate {
+    color: #5fbaa7;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+
+
+.btn{
+    background-color: #5fbaa7;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 10px;
 }
