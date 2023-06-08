@@ -80,6 +80,11 @@ li:hover::after {
    display: none;
 }
 
+.bg p{
+    position: absolute;
+    transform: translate(50%, 50%);
+}
+
 /* tablet */
 @media screen and (max-width: 930px) {
     header ul{
