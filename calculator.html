@@ -11,26 +11,30 @@
 
     <!-- 헤더 -->
     <header>
-        <a href="main.html"><img src="images/logo.png" alt="logo" class="logo"></a>
-        <!-- <i class="bi bi-chevron-down"></i> -->
-            <div>
-                <ul class="menu">
-                    <li><a href="checkList.html">체크리스트</a></li>
-                    <li><a href="calculator.html">환율 계산기</a></li>
-                    <li><a href="#">스케줄</a></li>
-                </ul>
+        <nav class="nav container">
+            <a href="main.html" class="nav-logo">
+                <img src="images/logo.png" alt="logo" class="logo">
+                
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="checkList.html" class="nav-link">체크리스트</a></li>
+                <li class="nav-item"><a href="calculator.html" class="nav-link">환율 계산기</a></li>
+                <li class="nav-item"><a href="" class="nav-link">스케줄</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav_toggle">
+                <i class="bi bi-chevron-compact-down"></i>
             </div>
         </nav>
-        <div>
-            <a href="login.html"><img src="images/login.png" alt="" class="login"></a>
-            <a href="#"><img src="images/lensB.png" alt="" class="lens"></a>
-        </div>
     </header>
 
-    <h1>계산기</h1>
-    <hr>
 
-    <div class="container">
+
+    <div class="div1">
+        <p>계산기</p>
+        <hr>
+    </div>
+    
+    <div class="container2">
         
         <div class="currency">
             <select class="selectcurrency" name="currency-one" id="currencyOne">
@@ -91,7 +95,6 @@
             <input type="number" id="amount-one" value="1">
         </div>
         <div class="swap-rate-container">
-            <button id="swap" class="btn">Swap</button>
             <div id="rate" class="rate"></div>
         </div>
         <div class="currency">
@@ -150,6 +153,7 @@
                 <option value="VND">VND</option>
                 <option value="ZAR">ZAR</option>
             </select>
+            <br>
             <input type="number" id="amount-two" value="1">
 
         </div>
@@ -158,48 +162,46 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-  const currencyOne = document.getElementById("currencyOne");
-  const amountOne = document.getElementById("amount-one");
-  const swap = document.getElementById("swap");
-  const rate = document.getElementById("rate");
-  const currencyTwo = document.getElementById("currencyTwo");
-  const amountTwo = document.getElementById("amount-two");
+        const currencyOne = document.getElementById("currencyOne");
+        const amountOne = document.getElementById("amount-one");
+        const swap = document.getElementById("swap");
+        const rate = document.getElementById("rate");
+        const currencyTwo = document.getElementById("currencyTwo");
+        const amountTwo = document.getElementById("amount-two");
 
-  // 환율 업데이트
+        // 환율 업데이트
 
-  const updateCurrency = async () => {
-    const url = await fetch(
-      `https://v6.exchangerate-api.com/v6/52f1f656328d5996e352de41/latest/${currencyOne.value}`
-    );
+        const updateCurrency = async () => {
+            const url = await fetch(
+            `https://v6.exchangerate-api.com/v6/52f1f656328d5996e352de41/latest/${currencyOne.value}`
+            );
 
-    data = await url.json();
+            data = await url.json();
 
-    rate.innerText = "1 " + currencyOne.value + " = " + data.conversion_rates[currencyTwo.value] + currencyTwo.value;
+            rate.innerText = " = ";
 
-    amountTwo.value = (
-      amountOne.value * data.conversion_rates[currencyTwo.value]
-    ).toFixed(2);
-  };
+            amountTwo.value = (
+            amountOne.value * data.conversion_rates[currencyTwo.value]
+            ).toFixed(2);
+        };
 
-  // 환율 서로 바꾸기
+        function changeCurrency() {
+            let temp;
 
-  function changeCurrency() {
-    let temp;
+            temp = currencyTwo.value;
 
-    temp = currencyTwo.value;
+            currencyTwo.value = currencyOne.value;
+            currencyOne.value = temp;
+            updateCurrency();
+        }
 
-    currencyTwo.value = currencyOne.value;
-    currencyOne.value = temp;
-    updateCurrency();
-  }
+        updateCurrency();
 
-  updateCurrency();
-
-  currencyOne.addEventListener("change", updateCurrency);
-  currencyTwo.addEventListener("change", updateCurrency);
-  amountOne.addEventListener("input", updateCurrency);
-  swap.addEventListener("click", changeCurrency);
-});
+        currencyOne.addEventListener("change", updateCurrency);
+        currencyTwo.addEventListener("change", updateCurrency);
+        amountOne.addEventListener("input", updateCurrency);
+        swap.addEventListener("click", changeCurrency);
+        });
     </script>
 </body>
 </html>
