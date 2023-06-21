@@ -28,16 +28,15 @@ header{
 }
 
 nav{
-    height: 44px;
+    height: 60px;
  }
 
  .nav.container{
-   display: flex;   /* 기본값 : 수평 정렬 */
+   display: flex;  
    justify-content: space-between;
    align-items: center;
    color: #fff;
-   padding: 0 16px; /*위아래 0 왼오른 16px*/
-
+   padding: 0 16px; 
 }
 
 .nav.container a {
@@ -46,12 +45,12 @@ nav{
 
 .nav-list{
   display: flex;
-  column-gap: 80px; /* item의 열 사이 공간 */ 
+  column-gap: 80px; 
 }
 
 .nav-toggle{
-  font-size: 20px; /* 햄버거 메뉴 사이즈 <- 이거 시험 나옴 */
-  visibility: hidden; /* 햄버거 메뉴 안 보이게 */
+  font-size: 20px; 
+  visibility: hidden; 
 }
 
  .logo{
@@ -79,8 +78,7 @@ nav{
 }
 
 .d{
-    margin: 50px;
-    margin-bottom: 0;
+    margin: 100px 50px 0 50px;
     z-index: 6;
     
 }
@@ -122,15 +120,13 @@ hr{
        margin: 0 auto;
     }
  
-    /* .nav-list navbar 아래로 */
     .nav-list{
        position: absolute;
        top: 44px;
-       right: 0; /* 너비를 양 옆으로 늘리기 */
-       left: 0; /* 너비를 양 옆으로 늘리기 */
+       right: 0; 
+       left: 0; 
        flex-direction: column;
-       /* align-items: center; 교차축 가운데 */
-       text-align: center; /*글자만 가운데로*/
+       text-align: center; 
        height: 0;
        overflow: hidden;
     }
@@ -142,16 +138,14 @@ hr{
     .nav-link{
        display: block;
     }
-    /* .nav-toggle 보이게 */
+
     .nav-toggle{
        visibility: visible;
-       position: absolute; /* .nav-logo 가운데 정확히 위치 */
-       right: 16px; /* 오른쪽 여백 16px 위치로 */
+       position: absolute; 
+       right: 16px;
        color: #000;
     }
     
-    /* show-menu하면, .nav-list 보이게 */
-    /* show-menu하면, .nav-toggle 버튼 x로 */
     .show-menu{
        height: 170px;
        display: flex;
