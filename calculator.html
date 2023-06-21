@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>환율 계산기</title>
     <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -95,7 +96,7 @@
             <input type="number" id="amount-one" value="1">
         </div>
         <div class="swap-rate-container">
-            <div id="rate" class="rate"></div>
+            <div id="rate" class="rate">=</div>
         </div>
         <div class="currency">
 
@@ -177,8 +178,6 @@
             );
 
             data = await url.json();
-
-            rate.innerText = " = ";
 
             amountTwo.value = (
             amountOne.value * data.conversion_rates[currencyTwo.value]

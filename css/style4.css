@@ -1,42 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 body{
-    background-color: #F4FAFB;
+  background-color: #F4FAFB;
 }
 
 ul{
-    list-style: none;
+  list-style: none;
 }
 
 a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    border-bottom: #797979 1px solid ;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: #797979 1px solid ;
 }
 
 nav{
-    height: 44px;
- }
+  height: 60px;
+}
 
- .nav.container{
-   display: flex;   /* 기본값 : 수평 정렬 */
-   justify-content: space-between;
-   align-items: center;
-   color: #fff;
-   padding: 0 16px; /*위아래 0 왼오른 16px*/
+.nav.container{
+  display: flex;   /* 기본값 : 수평 정렬 */
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 16px; /*위아래 0 왼오른 16px*/
 
 }
 
@@ -54,38 +54,43 @@ nav{
   visibility: hidden; /* 햄버거 메뉴 안 보이게 */
 }
 
- .logo{
-    width: 120px;
- }
+.logo{
+  width: 120px;
+}
 
- .nav-link{
-   position: relative; 
-    cursor: pointer;
- }
+.nav-link{
+ position: relative; 
+  cursor: pointer;
+}
 
 .nav-link::after {
-   position: absolute; 
-   content:""; 
-   display: block; 
-   border-bottom: 2px solid #000; 
-   transition: all 350ms ease-out; 
-   left: 50%; 
-   width: 0;
-}
-.nav-link:hover::after {
-   transition: all 350ms ease-out; 
-   left: 0%; 
-   width: 100%;
+  position: absolute; 
+  content:""; 
+  display: block; 
+  border-bottom: 2px solid #000; 
+  transition: all 350ms ease-out; 
+  left: 50%; 
+  width: 0;
 }
 
+.nav-link:hover::after {
+  transition: all 350ms ease-out; 
+  left: 0%; 
+  width: 100%;
+}
+
+
+
 .div1{
-  margin: 50px 20px 50px 20px;
-  margin-bottom: 0;
+  margin: 100px 50px 0 50px;
+
 }
 
 .div1 hr{
   border: #797979 0.5px solid;
-  margin: 10px  0px;  
+  width: 1238px;
+  margin: 10px 0;
+
 }
 
 .div1 p{
@@ -95,22 +100,78 @@ nav{
 }
 
 .selectcurrency{
-    width: 200px;
+    width: 500px;
+    height: 60px;
+    border: #000 2px solid;
+    border-radius: 15px;
+    font-size: 30px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+
+  }
+  
+  .container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #amount-one{
+    width: 490px;
+    height: 200px;
+    border: #000 2px solid;
+    border-radius: 15px;
+    font-size: 25px;
+    font-display: right;
+    padding-left: 10px;
+  }
+  
+  #amount-two{
+    width: 490px;
+    height: 200px;
+    border: #000 2px solid;
+    border-radius: 15px;
+    font-size: 25px;
+    padding-left: 10px;
 }
 
-.container2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.rate{
+  font-size: 80px;
 }
 
-#amount-one{
-  width: 200px;
-  height: 60px;
-}
+@media screen and (max-width: 720px) {
+  .nav-logo{
+     margin: 0 auto;
+  }
 
-#amount-two{
-  width: 200px;
-  height: 60px;
-}
+  .nav-list{
+     position: absolute;
+     top: 44px;
+     right: 0; 
+     left: 0; 
+     flex-direction: column;
+     text-align: center; 
+     height: 0;
+     overflow: hidden;
+  }
 
+  .nav-item{
+     padding: 1em 0;
+  }
+
+  .nav-link{
+     display: block;
+  }
+
+  .nav-toggle{
+     visibility: visible;
+     position: absolute;
+     right: 16px;
+     color: #000;
+  }
+  
+  .show-menu{
+     height: 170px;
+     display: flex;
+  }
+}
