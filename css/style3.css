@@ -108,6 +108,27 @@ hr{
     text-align: left;
     margin-left: 8%;
 }
+
+.div2{
+    text-align: center;
+}
+
+.div2 label{
+    margin: 0 30px;
+}
+
+h1{
+    margin-left: 50px;
+    display: inline;
+}
+
+.plusBtn{
+    width: 40px;
+    float: right;
+    display: inline;
+    margin-right: 40px;
+    margin-top: 5px;
+}
 @media screen and (max-width : 1125px) {
     .div1 > p {
         text-align: left;
