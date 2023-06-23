@@ -4,106 +4,146 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.airplainBG{
-    width: 100%;
-   
-}
-
-.airplainG{
-    width: 100%;
-    margin-top: -5px;
-}
-
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding: 1% 0% 1% 0%;
-    overflow: visible;
+ul{
+    list-style: none;
 }
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
-
-
-header ul {
-    text-align: center;
-    display: flex;
-    list-style: none;
+img{
+    max-width: 100%;
+    height: auto;
 }
 
-header ul li {
-    margin: 8px 40px;
-    position: relative; 
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav{
+    height: 60px;
+ }
+
+ .nav.container{
+   display: flex;   /* 기본값 : 수평 정렬 */
+   justify-content: space-between;
+   align-items: center;
+   color: #fff;
+   padding: 0 16px; /*위아래 0 왼오른 16px*/
+
+}
+
+.nav.container a {
+  color: #fff;
+}
+
+.nav-list{
+  display: flex;
+  column-gap: 80px; /* item의 열 사이 공간 */ 
+}
+
+.nav-toggle{
+  font-size: 20px; /* 햄버거 메뉴 사이즈 <- 이거 시험 나옴 */
+  visibility: hidden; /* 햄버거 메뉴 안 보이게 */
+}
+
+ .logo{
+    width: 120px;
+ }
+
+ .nav-link{
+   position: relative; 
     cursor: pointer;
+ }
+
+.nav-link::after {
+   position: absolute; 
+   content:""; 
+   display: block; 
+   border-bottom: 2px solid #fff; 
+   transition: all 350ms ease-out; 
+   left: 50%; 
+   width: 0;
+}
+.nav-link:hover::after {
+   transition: all 350ms ease-out; 
+   left: 0%; 
+   width: 100%;
 }
 
-.logo{
-   width: 150px;
+.airplainBG{
+   width: 100%;
+  
 }
 
-.login{
-    width: 50px;
+.airplainG{
+   width: 100%;
+   margin-top: -5px;
+}
+
+ @media screen and (max-width: 720px) {
+   .nav-logo{
+      margin: 0 auto;
+   }
+
+   /* .nav-list navbar 아래로 */
+   .nav-list{
+      position: absolute;
+      top: 44px;
+      right: 0; /* 너비를 양 옆으로 늘리기 */
+      left: 0; /* 너비를 양 옆으로 늘리기 */
+      flex-direction: column;
+      /* align-items: center; 교차축 가운데 */
+      text-align: center; /*글자만 가운데로*/
+      height: 0;
+      overflow: hidden;
+      transition: 0.4s;
+   }
+
+   .nav-item{
+      padding: 1em 0;
+   }
+
+   .nav-link{
+      display: block;
+   }
+   /* .nav-toggle 보이게 */
+   .nav-toggle{
+      visibility: visible;
+      position: absolute; /* .nav-logo 가운데 정확히 위치 */
+      right: 16px; /* 오른쪽 여백 16px 위치로 */
+   }
+   
+   /* show-menu하면, .nav-list 보이게 */
+   /* show-menu하면, .nav-toggle 버튼 x로 */
+   .show-menu{
+      height: 170px;
+      display: flex;
+   }
+ }
+
+ 
+ .login{
+   width: 43px;
 }
 
 .lens{
-    width: 20px;
-    margin-left: 20px;
+   width: 17px;
+   margin-left: 10px;
 }
 
-li::after {
-    position: absolute; 
-    content:""; 
-    display: block; 
-    border-bottom: 2px solid #fff; 
-    transition: all 350ms ease-out; 
-    left: 50%; 
-    width: 0;
-}
-li:hover::after {
-    transition: all 350ms ease-out; 
-    left: 0%; 
+
+
+
+ .airplainBG{
     width: 100%;
-}
-
-.bi-chevron-down{
-   color: #fff;
-   font-size: 40px;
-   display: none;
-}
-
-.bg p{
-    position: absolute;
-    width: 100;
-    height: 100;
-}
-
-/* tablet */
-@media screen and (max-width: 930px) {
-    header ul{
-       display: none;
-    }
-    .bi-chevron-down{
-        display: contents;
-    }
-    .menu{
-        display: contents;
-    }
-    
-}
-
-/* mobile */
-@media screen and (max-width: 540px) {
-    body{
-        background-color: yellow;
-    }
-    
-}
+ }
