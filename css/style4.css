@@ -86,17 +86,19 @@ nav{
 
 }
 
-.div1 hr{
+hr{
   border: #797979 0.5px solid;
-  width: 1238px;
-  margin: 10px 0;
+  margin: 10px 20px;
 
 }
 
 .div1 p{
   font-size: 30px;
   font-weight: bold;
-  margin-left: 20px;
+}
+
+.currency{
+  flex-wrap: wrap;
 }
 
 .selectcurrency{
@@ -138,6 +140,8 @@ nav{
 .rate{
   font-size: 80px;
 }
+
+
 
 @media screen and (max-width: 720px) {
   .nav-logo{
