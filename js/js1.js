@@ -1,16 +1,15 @@
-// const navToggleDiv = document.getElementById("nav_toggle");
-const navToggleI = nav_toggle.getElementsByTagName("i")[0];
-const navListUl = document.getElementsByClassName("nav-list")[0];
+const toggleBtnDown = document.querySelector('.bi-chevron-compact-down');
+const toggleBtnUp = document.querySelector('.bi-chevron-compact-up');
+const menu = document.querySelector('.nav-list');
 
-//2. Event Handling
-// nav_toggle.onclick = () => alert("안녕");
-// nav_toggle.onclick = alert("안녕");
-nav_toggle.onclick = () => {
-    //햄버거메뉴 클릭하면, 햄버거메뉴 i "bi bi-list"<-> X "bi bi-x-lg"
-    navToggleI.classList.toggle("bi-chevron-compact-down");
-    navToggleI.classList.toggle("bi-chevron-compact-up");
+toggleBtnDown.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    toggleBtnUp.classList.toggle('active');
+    toggleBtnDown.classList.add('active');
+});
 
-    //햄버거메뉴 클릭하면, .nav-list에 .show-munu보여주기 <-> 안보여주기
-    navListUl.classList.toggle("show-menu");
-
-}
+toggleBtnUp.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    toggleBtnUp.classList.toggle('active');
+    toggleBtnDown.classList.remove('active');
+});
