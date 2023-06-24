@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 
     <!-- 헤더 -->
     <header>
-        <a href="main.html"><img src="images/logo.png" alt="logo" class="logo"></a>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="checkList.html">체크리스트</a></li>
-                    <li><a href="calculator.html">환율 계산기</a></li>
-                    <li><a href="#">스케줄</a></li>
+        <nav class="navbar">
+            <a href="main.html">
+                <img src="images/logo.png" alt="" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <i class="bi bi-chevron-compact-down"></i>    
+                <ul class="nav-list">
+                    <li><a href="checkList.html" class="nav-link">체크리스트</a></li>
+                    <li><a href="calculator.html" class="nav-link">환율 계산기</a></li>
+                    <li><a href="schedule.html" class="nav-link">스케줄</a></li>
+                    <i class="bi bi-chevron-compact-up"></i>
                 </ul>
             </div>
+            <ul class="nav-l">  
+                <li><a href="login.html"><img src="images/login.png" alt="" class="login"></a></li>
+                <li><img src="images/lensB.png" alt="" class="lens"></li>
+            </ul>
         </nav>
-        <div>
-            <a href="login.html"><img src="images/login.png" alt="" class="login"></a>
-            <a href="#"><img src="images/lensB.png" alt="" class="lens"></a>
-        </div>
     </header>
 
     <div class="div1" align="center">
