@@ -14,52 +14,62 @@ ul{
 
 a{
     text-decoration: none;
-    color: black;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
+    color: #fff;
 }
 
 header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
 }
 
-nav{
-    height: 60px;
- }
-
- .nav.container{
-   display: flex;   /* 기본값 : 수평 정렬 */
-   justify-content: space-between;
-   align-items: center;
-   color: #fff;
-   padding: 0 16px; /*위아래 0 왼오른 16px*/
-
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 8px 12px;
 }
 
-.nav.container a {
-  color: #fff;
+.nav-logo{
+    width: 130px;
 }
 
 .nav-list{
-  display: flex;
-  column-gap: 80px; /* item의 열 사이 공간 */ 
+    display: flex;
+    padding-left: 0;
 }
 
-.nav-toggle{
-  font-size: 20px; /* 햄버거 메뉴 사이즈 <- 이거 시험 나옴 */
-  /* visibility: hidden; */
-  display: none;
+.nav-list li{
+    padding: 8px 30px;
 }
 
- .logo{
-    width: 120px;
- }
+.bi-chevron-compact-down{
+    align-items: center;
+    font-size: 35px;
+    display: none;
+    color: #fff;
+   }
+   
+.bi-chevron-compact-up{
+      font-size: 35px;
+      display: none;
+      color: #fff;
+}
+
+.nav-l{
+    display: flex;
+    padding-top: 5px;
+}
+
+.login{
+    width: 50px;
+}
+
+.lens{
+    width: 20px;
+    margin: 3px 0 0 8px;
+}
 
  .nav-link{
    position: relative; 
@@ -91,57 +101,59 @@ nav{
    margin-top: -5px;
 }
 
- @media screen and (max-width: 720px) {
-   .nav-logo{
-      margin: 0 auto;
+@media screen and (max-width: 720px) {
+    
+   .navbar{
+       justify-content: space-between;
    }
 
-   /* .nav-list navbar 아래로 */
-   .nav-list{
-      position: absolute;
-      top: 44px;
-      right: 0; /* 너비를 양 옆으로 늘리기 */
-      left: 0; /* 너비를 양 옆으로 늘리기 */
-      flex-direction: column;
-      /* align-items: center; 교차축 가운데 */
-      text-align: center; /*글자만 가운데로*/
-      height: 0;
-      overflow: hidden;
-      transition: 0.4s;
-   }
-
-   .nav-item{
-      padding: 1em 0;
-   }
-
-   .nav-link{
-      display: block;
-   }
-   /* .nav-toggle 보이게 */
-   .nav-toggle{   
-      display: contents;
-      /* visibility: visible; */
-      position: absolute; /* .nav-logo 가운데 정확히 위치 */
-      right: 16px; /* 오른쪽 여백 16px 위치로 */
+   .nav-menu{
+       justify-content: center;
+       flex-direction: column;
    }
    
-   /* show-menu하면, .nav-list 보이게 */
-   /* show-menu하면, .nav-toggle 버튼 x로 */
-   .show-menu{
-      height: 170px;
-      display: flex;
+   .nav-list{
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       overflow: hidden;
+       height: 0;
+       vertical-align: bottom;
    }
- }
+   
+   .nav-list li{
+       width: 100%;
+       text-align: center;
+       
+   }
+   
+   .bi-chevron-compact-down{
+       font-size: 35px;
+       display: contents;
+   }
 
+   .nav-list.active,
+   .bi-chevron-compact-up.active{
+       height: 100%;
+       display: contents;
+       display: flex;
+       transition: 0.4s;
+   }
+   
+   .bi-chevron-compact-down.active{
+       display: none;
+   }
+
+}
  
- .login{
+ /* .login{
    width: 43px;
 }
 
 .lens{
    width: 17px;
    margin-left: 10px;
-}
+} */
 
 
 
