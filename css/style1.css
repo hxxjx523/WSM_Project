@@ -53,7 +53,8 @@ nav{
 
 .nav-toggle{
   font-size: 20px; /* 햄버거 메뉴 사이즈 <- 이거 시험 나옴 */
-  visibility: hidden; /* 햄버거 메뉴 안 보이게 */
+  /* visibility: hidden; */
+  display: none;
 }
 
  .logo{
@@ -117,8 +118,9 @@ nav{
       display: block;
    }
    /* .nav-toggle 보이게 */
-   .nav-toggle{
-      visibility: visible;
+   .nav-toggle{   
+      display: contents;
+      /* visibility: visible; */
       position: absolute; /* .nav-logo 가운데 정확히 위치 */
       right: 16px; /* 오른쪽 여백 16px 위치로 */
    }
