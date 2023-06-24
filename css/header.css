@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+/* desctop */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: #797979 1px solid;
+ }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 8px 12px;
+}
+
+.nav-logo{
+    width: 130px;
+}
+
+.nav-list{
+    display: flex;
+    padding-left: 0;
+}
+
+.nav-list li{
+    padding: 8px 30px;
+}
+
+.bi-chevron-compact-down{
+    align-items: center;
+    font-size: 35px;
+    display: none;
+}
+
+.bi-chevron-compact-up{
+    font-size: 35px;
+    display: none;
+}
+
+.nav-l{
+    display: flex;
+    padding-top: 5px;
+}
+
+.login{
+    width: 50px;
+}
+
+.lens{
+    width: 20px;
+    margin: 3px 0 0 8px;
+}
+
+@media screen and (max-width: 720px) {
+    
+    .navbar{
+        justify-content: space-between;
+    }
+
+    .nav-menu{
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        vertical-align: bottom;
+    }
+    
+    .nav-list li{
+        width: 100%;
+        text-align: center;
+        
+    }
+    
+    .bi-chevron-compact-down{
+        font-size: 35px;
+        display: contents;
+    }
+
+    .nav-list.active,
+    .bi-chevron-compact-up.active{
+        height: 100%;
+        display: contents;
+        display: flex;
+        transition: 0.4s;
+    }
+    
+    .bi-chevron-compact-down.active{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+/* 
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-list li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-l{
+        justify-content: center;
+        width: 100%;
+    } */
+}
