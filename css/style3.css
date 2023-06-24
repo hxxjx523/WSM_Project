@@ -1,43 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 body{
-    background-color: #F4FAFB;
+  background-color: #F4FAFB;
 }
 
 ul{
-    list-style: none;
+  list-style: none;
 }
 
 a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    border-bottom: #797979 1px solid ;
-    background-color: rgba(244, 250, 251, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: #797979 1px solid ;
 }
 
 nav{
-    height: 60px;
- }
+  height: 60px;
+}
 
- .nav.container{
-   display: flex;  
-   justify-content: space-between;
-   align-items: center;
-   color: #fff;
-   padding: 0 16px; 
+.nav.container{
+  display: flex;   /* 기본값 : 수평 정렬 */
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 16px; /*위아래 0 왼오른 16px*/
+
 }
 
 .nav.container a {
@@ -46,36 +46,37 @@ nav{
 
 .nav-list{
   display: flex;
-  column-gap: 80px; 
+  column-gap: 80px; /* item의 열 사이 공간 */ 
 }
 
 .nav-toggle{
-  font-size: 20px; 
-  visibility: hidden; 
+  font-size: 20px; /* 햄버거 메뉴 사이즈 <- 이거 시험 나옴 */
+  visibility: hidden; /* 햄버거 메뉴 안 보이게 */
 }
 
- .logo{
-    width: 120px;
- }
+.logo{
+  width: 120px;
+}
 
- .nav-link{
-   position: relative; 
-    cursor: pointer;
- }
+.nav-link{
+ position: relative; 
+  cursor: pointer;
+}
 
 .nav-link::after {
-   position: absolute; 
-   content:""; 
-   display: block; 
-   border-bottom: 2px solid #000; 
-   transition: all 350ms ease-out; 
-   left: 50%; 
-   width: 0;
+  position: absolute; 
+  content:""; 
+  display: block; 
+  border-bottom: 2px solid #000; 
+  transition: all 350ms ease-out; 
+  left: 50%; 
+  width: 0;
 }
+
 .nav-link:hover::after {
-   transition: all 350ms ease-out; 
-   left: 0%; 
-   width: 100%;
+  transition: all 350ms ease-out; 
+  left: 0%; 
+  width: 100%;
 }
 
 .d{
