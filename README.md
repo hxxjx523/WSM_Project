@@ -4,7 +4,8 @@
 <hr>
 
 ## 📌 실행 방법
-main.html 파일 열기
+index.html 파일 열기
+https://tripstart.netlify.app/ 배포 링크 열기
 <hr>
 
 ## 📌 개발 기간
