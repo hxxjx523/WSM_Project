@@ -1,5 +1,5 @@
-const toggleBtnDown = document.querySelector('.bi-chevron-compact-down');
-const toggleBtnUp = document.querySelector('.bi-chevron-compact-up');
+const toggleBtnDown = document.querySelector('.down');
+const toggleBtnUp = document.querySelector('.up');
 const menu = document.querySelector('.nav-list');
 
 toggleBtnDown.addEventListener('click', () => {

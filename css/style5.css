@@ -1,3 +1,12 @@
+html, body{
+    height: 100%;
+}
+
+.wrap{
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 70px;
+}
 
 h1{
     display: inline;
@@ -21,14 +30,12 @@ hr{
 }
 
 .DivContainer{
-    margin-top: 100px;
+    margin: 100px auto;
     display: flex;
-    gap: 80px; /* row-gap: 20px; column-gap: 20px; */
-    flex-wrap: wrap;     /* 요소 내리기 */
+    gap: 80px;
+    flex-wrap: wrap;
     justify-content: center;
     max-width: calc(150px * 6 + 80px * 3);
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .div2{
@@ -42,37 +49,49 @@ hr{
 
 .div2 input{
     border: 0;
-    width: 200px;
+    width: 220px;
     height: 40px;
     display: flex;
     margin: 10px 0 0 20px;
     font-size: 20px;
-    /* display: inline; */
+    display: inline;
+}
+
+input::placeholder{
+    color: black;
+}
+
+.div2 p{
+    font-size: 20px;
+    margin: 30px;
 }
 
 .plusBtn{
     display: inline;
     float: right;
     width: 30px;
-    left: -30px;
+    margin: 20px 20px 0 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
+
     .div2{
         width: 250px;
-        height: 460px;
+        height: 400px;
+    }
+
+    .div2 p{
+        font-size: 15px;
+        margin: 30px;
     }
 
     .div2 input{
         border: 0;
-        width: 200px;
-        height: 30px;
+        width: 170px;
+        height: 40px;
         display: flex;
-        justify-content: center;
-        margin-left: auto;
-        margin-left: auto;
-    }
-}
-
-@media screen and (max-width: 720px) {
+        margin: 10px 0 0 20px;
+        font-size: 20px;
+        display: inline;
+    }       
 }

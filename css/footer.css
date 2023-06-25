@@ -1,0 +1,19 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    border-top: #797979 1px solid;
+    display: flex;
+    width: 100%;
+}
+
+footer p{
+    font-size: 10px;
+    color: rgb(137, 137, 137);
+    margin: 15px 10px;
+}
+
+footer img{
+    margin-bottom: -5px;
+    margin: 5px;
+    width: 60px;
+}

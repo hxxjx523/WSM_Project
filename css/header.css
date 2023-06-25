@@ -42,23 +42,42 @@ header{
 }
 
 .nav-list li{
-    padding: 8px 30px;
+    padding: 8px 70px;
 }
 
-.bi-chevron-compact-down{
+.down{
     align-items: center;
-    font-size: 35px;
     display: none;
 }
 
-.bi-chevron-compact-up{
-    font-size: 35px;
+.up{
+    width: 40px;
     display: none;
 }
 
 .nav-l{
     display: flex;
     padding-top: 5px;
+}
+
+.nav-link{
+    position: relative; 
+    cursor: pointer;
+}
+
+.nav-link::after {
+    position: absolute; 
+    content:""; 
+    display: block; 
+    border-bottom: 2px solid #000; 
+    transition: all 350ms ease-out; 
+    left: 50%; 
+    width: 0;
+}
+.nav-link:hover::after {
+    transition: all 350ms ease-out; 
+    left: 0%; 
+    width: 100%;
 }
 
 .login{
@@ -70,15 +89,22 @@ header{
     margin: 3px 0 0 8px;
 }
 
+@media screen and (max-width: 930px) {
+    .nav-list li{
+        padding: 8px 40px;
+        
+    }
+}
+
 @media screen and (max-width: 720px) {
     
     .navbar{
         justify-content: space-between;
     }
-
+    
     .nav-menu{
-        justify-content: center;
         flex-direction: column;
+        text-align: center;
     }
     
     .nav-list{
@@ -93,48 +119,25 @@ header{
     .nav-list li{
         width: 100%;
         text-align: center;
+        padding: 8px 40px;
         
     }
     
-    .bi-chevron-compact-down{
-        font-size: 35px;
-        display: contents;
+    .down{
+        width: 40px;
+        display: inline;
     }
 
     .nav-list.active,
-    .bi-chevron-compact-up.active{
+    .up.active{
         height: 100%;
         display: contents;
         display: flex;
         transition: 0.4s;
     }
     
-    .bi-chevron-compact-down.active{
+    .down.active{
         display: none;
     }
 
-}
-
-@media screen and (max-width: 540px) {
-/* 
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-list{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .nav-list li{
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-l{
-        justify-content: center;
-        width: 100%;
-    } */
 }
