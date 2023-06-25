@@ -4,7 +4,7 @@
 <hr>
 
 ## 📌 실행 방법
-index.html 파일 열기
+index.html 파일 열기 <br>
 https://tripstart.netlify.app/ 배포 링크 열기
 <hr>
 
